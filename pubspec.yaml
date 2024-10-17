@@ -1,0 +1,42 @@
+name: onbroading_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.10+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+fonts:
+  - family: Raleway
+    fonts:
+      - asset: fonts/Raleway-Regular.ttf
+      - asset: fonts/Raleway-Italic.ttf
+        style: italic
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Regular.ttf
+        - asset: assets/fonts/poppins/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/poppins/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/poppins/Poppins-SemiBold.ttf
+          weight: 600
+  assets:
+  - assets/images/welcome_image.png
+  - assets/icons/apple_icon.svg
+  - assets/icons/google_icon.svg
+  - assets/icons/facebook_icon.svg
