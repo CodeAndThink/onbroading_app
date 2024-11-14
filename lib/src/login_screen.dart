@@ -17,6 +17,7 @@ class LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -158,6 +159,8 @@ class LoginScreenState extends State<LoginScreen> {
       child: TextFormField(
         style: const TextStyle(fontWeight: FontWeight.w500),
         decoration: InputDecoration(
+          filled: true,
+          fillColor: Values.baseTextInputBackgroundColor,
           contentPadding: const EdgeInsets.all(20),
           hintText: hint,
           hintStyle: const TextStyle(color: Values.baseHintTextColor),

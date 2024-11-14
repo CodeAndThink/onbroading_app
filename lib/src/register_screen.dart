@@ -137,6 +137,7 @@ class RegisterScreenState extends State<RegisterScreen> {
     return TextFormField(
       style: const TextStyle(fontWeight: FontWeight.w500),
       decoration: InputDecoration(
+          filled: true,
           fillColor: Values.baseTextInputBackgroundColor,
           contentPadding: const EdgeInsets.all(20),
           hintText: hint,
