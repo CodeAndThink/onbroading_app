@@ -166,12 +166,14 @@ class LoginScreenState extends State<LoginScreen> {
           hintStyle: const TextStyle(color: Values.baseHintTextColor),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
           enabledBorder: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(
               color: Colors.transparent,
               width: 1.0,
             ),
           ),
           focusedBorder: OutlineInputBorder(
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(
               color: Theme.of(context).colorScheme.primary,
               width: 2.0,

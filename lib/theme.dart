@@ -14,9 +14,9 @@ class AppTheme {
           surface: Colors.white, primary: Color(0xff1f41bb)),
       textTheme: const TextTheme(
           headlineLarge: TextStyle(
-              fontSize: 30.0,
+              fontSize: 35,
               fontStyle: FontStyle.normal,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w600,
               color: Color(0xff1f41bb)),
           headlineMedium: TextStyle(
             fontSize: 20.0,
