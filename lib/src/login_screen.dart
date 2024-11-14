@@ -45,11 +45,11 @@ class LoginScreenState extends State<LoginScreen> {
               margin: const EdgeInsets.only(top: 74, left: 31, right: 31),
               child: Column(
                 children: [
-                  _textInputBox("Email", _emailController),
+                  _textInputBox("Email", _emailController, false),
                   const SizedBox(
                     height: 29,
                   ),
-                  _textInputBox("Password", _passwordController),
+                  _textInputBox("Password", _passwordController, true),
                   const SizedBox(
                     height: 30,
                   ),
@@ -103,10 +103,11 @@ class LoginScreenState extends State<LoginScreen> {
                   ),
                   TextButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const RegisterScreen()));
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const RegisterScreen()),
+                        );
                       },
                       child: const Text(
                         "Create new account",
@@ -153,7 +154,8 @@ class LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _textInputBox(String hint, TextEditingController controller) {
+  Widget _textInputBox(
+      String hint, TextEditingController controller, bool isSecure) {
     return SizedBox(
       height: 64,
       child: TextFormField(
@@ -181,6 +183,7 @@ class LoginScreenState extends State<LoginScreen> {
           ),
         ),
         controller: controller,
+        obscureText: isSecure,
       ),
     );
   }

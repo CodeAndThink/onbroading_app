@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:onbroading_app/src/login_screen.dart';
 import 'package:onbroading_app/static_values/values.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -12,6 +13,7 @@ class RegisterScreen extends StatefulWidget {
 class RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _rePasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -43,15 +45,16 @@ class RegisterScreenState extends State<RegisterScreen> {
               margin: const EdgeInsets.only(top: 74, left: 31, right: 31),
               child: Column(
                 children: [
-                  _textInputBox("Email", _emailController),
+                  _textInputBox("Email", _emailController, false),
                   const SizedBox(
                     height: 26,
                   ),
-                  _textInputBox("Password", _passwordController),
+                  _textInputBox("Password", _passwordController, true),
                   const SizedBox(
                     height: 26,
                   ),
-                  _textInputBox("Confirm Password", _passwordController),
+                  _textInputBox(
+                      "Confirm Password", _rePasswordController, true),
                   const SizedBox(
                     height: 53,
                   ),
@@ -85,7 +88,11 @@ class RegisterScreenState extends State<RegisterScreen> {
                   ),
                   TextButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginScreen()),
+                        );
                       },
                       child: Text("Already have an account",
                           style: Theme.of(context)
@@ -133,7 +140,8 @@ class RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  Widget _textInputBox(String hint, TextEditingController controller) {
+  Widget _textInputBox(
+      String hint, TextEditingController controller, bool isSecure) {
     return TextFormField(
       style: const TextStyle(fontWeight: FontWeight.w500),
       decoration: InputDecoration(
@@ -158,6 +166,7 @@ class RegisterScreenState extends State<RegisterScreen> {
           ),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
       controller: controller,
+      obscureText: isSecure,
     );
   }
 

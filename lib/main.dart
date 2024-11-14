@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:onbroading_app/src/login_screen.dart';
+import 'package:onbroading_app/src/register_screen.dart';
 import 'package:onbroading_app/src/welcome_screen.dart';
 import 'package:onbroading_app/theme.dart';
 
@@ -12,6 +14,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/login',
+      routes: {
+        '/login' : (context) => const LoginScreen(),
+        '/register' : (context) => const RegisterScreen()
+      },
       theme: AppTheme.lightTheme,
       themeMode: ThemeMode.light,
       home: const Scaffold(
