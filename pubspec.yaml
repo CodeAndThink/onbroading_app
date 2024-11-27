@@ -10,6 +10,13 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.10+1
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/logo.png"
 
 dev_dependencies:
   flutter_test:
@@ -25,6 +32,7 @@ fonts:
 
 flutter:
   uses-material-design: true
+  generate: true
   fonts:
     - family: Poppins
       fonts:
@@ -41,3 +49,4 @@ flutter:
   - assets/icons/google_icon.svg
   - assets/icons/facebook_icon.svg
   - assets/images/background_shape.png
+  - assets/images/logo.png
