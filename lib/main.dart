@@ -14,10 +14,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/login',
+      initialRoute: '/welcome',
       routes: {
         '/login' : (context) => const LoginScreen(),
-        '/register' : (context) => const RegisterScreen()
+        '/register' : (context) => const RegisterScreen(),
+        '/welcome' : (context) => const WelcomeScreen()
       },
       theme: AppTheme.lightTheme,
       themeMode: ThemeMode.light,
